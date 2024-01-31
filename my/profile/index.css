@@ -1,0 +1,58 @@
+@media {
+    body block card {
+        margin: auto;
+        width: 960px;
+    }
+    
+    body .block-about .card-info {
+        margin: auto;
+        width: 960px;
+    }
+    
+    body .block-about .card-user {
+        margin: auto;
+        width: 960px;
+    }
+}
+
+@media {
+    body .box-avatar {
+        background: #808080;
+        border-radius: 50%;
+        box-shadow: 0 0px 1pc rgba(0,0,0,0.5);
+        height: 120px;
+        margin: 50px;
+        overflow: hidden;
+        position: relative;
+        width: 120px;
+    }
+
+    body[auth] .box-avatar picture:empty + picture {
+        display: none;
+    }
+
+    body[auth] .box-avatar picture img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        width: 100%;
+    }
+
+    body:not([auth]) > .body-header .card-buttons .box-avatar picture:not(:empty) + picture {
+        display: none;
+    }
+
+    body:not([auth]) > .body-header .card-buttons .box-avatar picture + picture img {
+        bottom: 0;
+        filter: invert(1);
+        height: 80%;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        width: 75%;
+    }
+}
