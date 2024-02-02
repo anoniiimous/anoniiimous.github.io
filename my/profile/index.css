@@ -1,14 +1,15 @@
 @media {
     body block card {
         margin: auto;
+        max-width: calc(100%);
         width: 960px;
     }
-    
+
     body .block-about .card-info {
         margin: auto;
         width: 960px;
     }
-    
+
     body .block-about .card-user {
         border-bottom: 1px solid #111;
         display: flex;
@@ -16,7 +17,13 @@
         margin: auto;
         width: 960px;
     }
-    
+
+    @media (max-width: 768px) {
+        body .block-about .card-user {
+            flex-direction: column;
+        }
+    }
+
     body .block-about .card-user > row:nth-child(2) {
         flex: 1;
         flex-direction: column;
@@ -24,32 +31,60 @@
         gap: 20px;
         padding: 50px 0;
     }
-    
+
     body .block-about .card-user > row:nth-child(2) box {
         display: inline-block;
     }
-    
+
+    body .block-about .card-user > row:nth-child(2) box > header {
+        display: flex;
+        flex-direction: column;
+    }
+
     body .block-about .card-user > row:nth-child(2) box:nth-child(2) {
         /* display: none; */
     }
-    
+
     body .block-about .card-user > row:nth-child(2) box > flex {
         display: inline-flex;
         gap: 30px;
     }
-    
+
     body .block-about .card-user > row:nth-child(2) box > flex text span:first-child {
         font-weight: bolder;
     }
-    
+
     body .block-about .card-user > row:nth-child(2) box:nth-child(1) text {
         font-size: 24px;
     }
-    
+
     body .block-about .card-user > row:nth-child(2) > box:nth-child(2) > section {
         gap: 36px;
     }
-    
+}
+
+@media {
+    body .tab-posts {
+    }
+
+    body .tab-posts .card-feed {
+    }
+
+    body .tab-posts .card-feed > flex {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    body .tab-posts .card-feed > flex box {
+        background: #808080;
+        width: calc((100% - 20px)/3);
+    }
+
+    body .tab-posts .card-feed > flex box picture {
+        display: flex;
+        padding-top: 100%;
+        width: 100%;
+    }
 }
 
 @media {
@@ -63,6 +98,12 @@
         overflow: hidden;
         position: relative;
         width: 120px;
+    }
+
+    @media (max-width: 768px) {
+        body .box-avatar {
+            margin: 50px auto;
+        }
     }
 
     body[auth] .box-avatar picture:empty + picture {
