@@ -64,6 +64,22 @@
 }
 
 @media {
+    body .block-about {
+    }
+}
+
+@media {
+    body .block-tabs {
+    }
+    
+    body .block-tabs card {
+    }
+    
+    body .block-tabs card box {
+    }
+}
+
+@media {
     body .tab-posts {
     }
 
@@ -90,7 +106,7 @@
 @media {
     body .box-avatar {
         /* background: #808080; */
-        border: 1px solid #111;
+        border: 10px solid #111;
         border-radius: 50%;
         box-shadow: 0 0px 1pc rgba(0,0,0,0.5);
         height: 120px;
